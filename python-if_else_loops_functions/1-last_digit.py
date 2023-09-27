@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import random
-number = random.randint(-10000, -1)
+number = random.randint(-10000, 10000)
 last = number
 if number > 0:
     while last > 10:
