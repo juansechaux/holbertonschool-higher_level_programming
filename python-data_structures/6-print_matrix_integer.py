@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
     if matrix:
         empy = 0
@@ -13,4 +14,4 @@ def print_matrix_integer(matrix=[[]]):
                     empy += 1
                 cont += 1
         if empy == 0:
-            print("{:d}".format(""))
+            print("{}".format(""))
