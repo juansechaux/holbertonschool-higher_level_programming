@@ -10,7 +10,7 @@ def print_matrix_integer(matrix=[[]]):
                     empy += 1
                 else:
                     print("{} ".format(c), end=(""))
+                    empy += 1
                 cont += 1
-                empy += 1
         if empy == 0:
             print("{}".format(""))
