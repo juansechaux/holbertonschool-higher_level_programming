@@ -6,10 +6,10 @@ def print_matrix_integer(matrix=[[]]):
             cont = 1
             for c in i:
                 if long == cont:
-                    print("{}".format(c))
+                    print("{:d}".format(c))
                     empy += 1
                 else:
-                    print("{} ".format(c), end=(""))
+                    print("{:d} ".format(c), end=(""))
                     empy += 1
                 cont += 1
         if empy == 0:
