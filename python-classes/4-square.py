@@ -14,6 +14,7 @@ class Square:
         else:
             print("size must be an integer", end="")
             raise TypeError
+
     @property
     def size(self):
         return self.__size
