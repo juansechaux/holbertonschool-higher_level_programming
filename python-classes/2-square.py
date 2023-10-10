@@ -14,4 +14,3 @@ class Square:
         else:
             print("size must be an integer", end="")
             raise TypeError
-
