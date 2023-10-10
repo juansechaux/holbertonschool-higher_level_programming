@@ -9,12 +9,12 @@ class Square:
             if size >= 0:
                 self.__size = size
             else:
-                print("size must be >= 0", end="")
+                print("size must be >= 0")
                 raise ValueError
         else:
-            print("size must be an integer", end="")
+            print("size must be an integer")
             raise TypeError
-        if len(position) <= 2:
+        if len(position) == 2:
             if isinstance(position[0], int) and isinstance(position[1], int):
                 if position[0] >= 0 and position[1] >= 0:
                     self.__position = (position[0], position[1])
@@ -47,7 +47,7 @@ class Square:
 
     @position.setter
     def position(self, value):
-        if len(value) < 2:
+        if len(value) == 2:
             if isinstance(value[0], int) and isinstance(value[1], int):
                 if value[0] >= 0 and value[1] >= 0:
                     self.__position = (value[0], value[1])
