@@ -5,27 +5,8 @@
 class Square:
     """This class has private instance attribute: size"""
     def __init__(self, size=0, position=(0, 0)):
-        if isinstance(size, int):
-            if size >= 0:
-                self.__size = size
-            else:
-                print("size must be >= 0")
-                raise ValueError
-        else:
-            print("size must be an integer")
-            raise TypeError
-        if len(position) == 2:
-            if isinstance(position[0], int) and isinstance(position[1], int):
-                if position[0] >= 0 and position[1] >= 0:
-                    self.__position = (position[0], position[1])
-                else:
-                    print("position must be a tuple of 2 positive integers", end="")
-                    raise TypeError
-            else:
-                print("position must be a tuple of 2 positive integers", end="")
-                raise TypeError
-        else:
-            raise TypeError("position must be a tuple of 2 positive integers")
+        self.size = size
+        self.position = (position[0], position[1])
 
     @property
     def size(self):
