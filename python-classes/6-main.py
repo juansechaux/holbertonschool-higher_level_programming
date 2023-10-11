@@ -20,3 +20,8 @@ try:
     my_square = Square(3, (1, ))
 except Exception as e:
     print(e)
+
+try:
+    my_square = Square(3, (1, "3"))
+except Exception as e:
+    print(e)
