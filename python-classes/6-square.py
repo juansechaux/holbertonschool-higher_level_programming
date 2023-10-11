@@ -22,7 +22,7 @@ class Square:
                     print("position must be a tuple of 2 positive integers", end="")
                     raise TypeError
             else:
-                print("position must be a tuple of 2 positive integers")
+                print("position must be a tuple of 2 positive integers", end="")
                 raise TypeError
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
