@@ -44,13 +44,13 @@ class Rectangle:
             return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
+        new_str = ""
         if self.__width == 0 or self.__height == 0:
-            return ""
+            return new_str
         else:
             for colum in range(0, self.__height):
                 for rows in range(0, self.__width):
-                    print("#", end="")
-                if colum == self.__height - 1:
-                    return ""
-                else:
-                    print("")
+                    new_str += "#"
+                if colum < self.__height -1:
+                    new_str += "\n"
+            return new_str
