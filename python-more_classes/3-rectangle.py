@@ -51,6 +51,6 @@ class Rectangle:
             for colum in range(0, self.__height):
                 for rows in range(0, self.__width):
                     new_str += "#"
-                if colum < self.__height -1:
+                if colum < self.__height - 1:
                     new_str += "\n"
             return new_str
