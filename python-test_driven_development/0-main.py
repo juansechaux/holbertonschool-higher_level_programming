@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 add_integer = __import__('0-add_integer').add_integer
 
-print(add_integer(1, 2))
+print(add_integer(float('nan'), 10))
 print(add_integer(1e10000000, 100))
 print(add_integer(2))
 print(add_integer(100.3, -2))

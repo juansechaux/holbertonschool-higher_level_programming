@@ -11,8 +11,9 @@ This is an example text file in 0-add_integer.py.  First import
 >>> add_integer(2, 3)
 5
 
->>> add_integer(-1, 10)
-9
+>>> add_integer(float('nan'), 10)
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
 
 >>> add_integer(1e10000000, 100)
 Traceback (most recent call last):
