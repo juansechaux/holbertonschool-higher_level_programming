@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 """
-This is the "add" module.
-The add module supplies one function, add_integer().  For example,
->>> add_integer(1, 2)
-3
+This is the "matrix_divided" module.
+The matrix_divided module supplies one function, matrix_divided().  For example,
+>>> matrix_divided(matrix, 2)
+new matrix
 """
 
 
 def matrix_divided(matrix, div):
-    """Returns an integer: the addition of a and b
-    a and b must b integers or floats
+    """Returns a new matrix
+    matrix must be a list of lists of integers or floats
     """
     error = "matrix must be a matrix (list of lists) of integers/floats"
     long = len(matrix[0])
