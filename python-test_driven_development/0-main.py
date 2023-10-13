@@ -2,7 +2,7 @@
 add_integer = __import__('0-add_integer').add_integer
 
 print(add_integer(1, 2))
-print(add_integer(100, -2))
+print(add_integer(1e10000000, 100))
 print(add_integer(2))
 print(add_integer(100.3, -2))
 try:
@@ -10,6 +10,6 @@ try:
 except Exception as e:
     print(e)
 try:
-    print(add_integer(None))
+    print(add_integer(1e10000000, 100))
 except Exception as e:
     print(e)
