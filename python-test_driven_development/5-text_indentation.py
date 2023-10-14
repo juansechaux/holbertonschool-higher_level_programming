@@ -22,6 +22,7 @@ def text_indentation(text):
             else:
                 esp_ch = ""
                 print(a_char, end="")
+                continue
         if a_char == "." or a_char == "?" or a_char == ":":
             print(a_char)
             print("")
