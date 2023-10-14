@@ -1,0 +1,27 @@
+The ``5-text_indentation.py`` module
+======================
+
+Using ``text_indentation``
+-------------------
+
+This is an example text file in 5-text_indentation.py.  First import
+``text_indentation`` from the ``5-text_indentation.py`` module:
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("""hi. My name is: Juan. What your name?""")
+hi.
+<BLANKLINE>
+My name is:
+<BLANKLINE>
+Juan.
+<BLANKLINE>
+What your name?
+<BLANKLINE>
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
