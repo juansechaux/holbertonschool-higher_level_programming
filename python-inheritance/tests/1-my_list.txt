@@ -28,3 +28,7 @@ This is an example text file in 1-my_list.py.  First import
 >>> my_list.append(-2)
 >>> my_list.print_sorted()
 [-4, -2, -1]
+
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
