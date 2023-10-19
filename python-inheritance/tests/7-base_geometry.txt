@@ -1,0 +1,25 @@
+The ``7-base_geometry.py`` module
+======================
+
+Using ``BaseGeometry``
+-------------------
+
+This is an example text file in 7-base_geometry.py.  First import
+``BaseGeometry`` from the ``7-base_geometry.py`` module:
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+# BaseGeometry = correct way
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int", 12)
+
+# BaseGeometry = less or equal to 0
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int", 0)
+Traceback (most recent call last):
+ValueError: my_int must be greater than 0
+
+# BaseGeometry = less or equal to 0
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int", "prueba")
+Traceback (most recent call last):
+TypeError: my_int must be an integer
