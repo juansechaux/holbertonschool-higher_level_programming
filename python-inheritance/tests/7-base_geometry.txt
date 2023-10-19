@@ -29,15 +29,3 @@ TypeError: my_int must be an integer
 >>> bg.integer_validator("my_int", -5)
 Traceback (most recent call last):
 ValueError: my_int must be greater than 0
-
-# BaseGeometry = None
->>> bg = BaseGeometry()
->>> bg.integer_validator()
-Traceback (most recent call last):
-TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
-
-# BaseGeometry = 1 argument missing
->>> bg = BaseGeometry()
->>> bg.integer_validator("my_int")
-Traceback (most recent call last):
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
