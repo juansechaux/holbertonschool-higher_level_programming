@@ -8,6 +8,12 @@ This is an example text file in 7-base_geometry.py.  First import
 ``BaseGeometry`` from the ``7-base_geometry.py`` module:
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+# BaseGeometry area = correct way
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
+
 # BaseGeometry = correct way
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("my_int", 12)
