@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-"""Module that appends a string at the end of a text file (UTF8)
+"""Module that returns the JSON representation of an object (string).
 """
 import json
 
 
 def to_json_string(my_obj):
-    """Function that appends a string at the end of a text file (UTF8)
-    (UTF8) and returns the number of characters written
+    """Function that returns the JSON representation of an object (string).
     """
     return json.dumps(my_obj)
