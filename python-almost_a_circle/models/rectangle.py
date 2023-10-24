@@ -43,6 +43,6 @@ class Rectangle(Base):
     def y(self):
         return self.__y
 
-    @x.setter
+    @y.setter
     def y(self, value):
         self.__y = value

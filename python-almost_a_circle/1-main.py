@@ -12,3 +12,6 @@ if __name__ == "__main__":
 
     r3 = Rectangle(10, 2, 0, 0, 12)
     print(r3.id)
+    print(r3.y)
+    r3.y = 3
+    print(r3.y)
