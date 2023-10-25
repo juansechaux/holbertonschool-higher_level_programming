@@ -85,7 +85,7 @@ class Rectangle(Base):
         size = f"{self.x}/{self.y}"
         return f"{s} ({self.id}) {size} - {self.width}/{self.height}"
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update the args of the class Rectangle,
         1st argument should be the id attribute
         2nd argument should be the width attribute
@@ -104,3 +104,14 @@ class Rectangle(Base):
                 self.x = args[arg]
             elif arg == 4:
                 self.y = args[arg]
+        for key, value in kwargs.items():
+            if key == "id":
+                super().__init__(value)
+            elif key == "width":
+                self.width = value
+            elif key == "height":
+                self.height = value
+            elif key == "x":
+                self.x = value
+            elif key == "y":
+                self.y = value
