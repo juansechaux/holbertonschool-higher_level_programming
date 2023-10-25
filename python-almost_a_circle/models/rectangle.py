@@ -93,25 +93,11 @@ class Rectangle(Base):
         4th argument should be the x attribute
         5th argument should be the y attribute
         """
-        for arg in range(len(args)):
-            if arg == 0:
-                super().__init__(args[arg])
-            elif arg == 1:
-                self.width = args[arg]
-            elif arg == 2:
-                self.height = args[arg]
-            elif arg == 3:
-                self.x = args[arg]
-            elif arg == 4:
-                self.y = args[arg]
-        for key, value in kwargs.items():
-            if key == "id":
-                super().__init__(value)
-            elif key == "width":
-                self.width = value
-            elif key == "height":
-                self.height = value
-            elif key == "x":
-                self.x = value
-            elif key == "y":
-                self.y = value
+        names = ["id", "width", "height", "x", "y"]
+        if args is not () and args is not None:
+            for value, name in zip(args, names):
+                setattr(self, name, value)
+        else:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
