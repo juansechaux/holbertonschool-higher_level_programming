@@ -70,6 +70,8 @@ class Rectangle(Base):
 
     def display(self):
         """function that print the rectangle with "#"
+        x = spaces in before de width
+        y = line breaks before the print the rectangle
         """
         print("\n" * self.__y, end="")
         for col in range(self.__height):
@@ -82,3 +84,23 @@ class Rectangle(Base):
         s = "[Rectangle]"
         size = f"{self.x}/{self.y}"
         return f"{s} ({self.id}) {size} - {self.width}/{self.height}"
+
+    def update(self, *args):
+        """update the args of the class Rectangle,
+        1st argument should be the id attribute
+        2nd argument should be the width attribute
+        3rd argument should be the height attribute
+        4th argument should be the x attribute
+        5th argument should be the y attribute
+        """
+        for arg in range(len(args)):
+            if arg == 0:
+                super().__init__(args[arg])
+            elif arg == 1:
+                self.width = args[arg]
+            elif arg == 2:
+                self.height = args[arg]
+            elif arg == 3:
+                self.x = args[arg]
+            elif arg == 4:
+                self.y = args[arg]
