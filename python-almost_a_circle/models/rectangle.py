@@ -71,13 +71,11 @@ class Rectangle(Base):
     def display(self):
         """function that print the rectangle with "#"
         """
+        for y_col in range(self.__y):
+            print("")
         for col in range(self.__height):
-            for row in range(self.__width):
-                print("#", end="")
-            if col == self.__height:
-                pass
-            else:
-                print("")
+            print(" " * self.__x, end="")
+            print("#" * self.__width)
 
     def __str__(self):
         """Magic method str,
