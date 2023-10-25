@@ -94,3 +94,11 @@ class Rectangle(Base):
                 pass
             else:
                 print("")
+
+    def __str__(self):
+        """Magic method str,
+        print the actual size of the rectangle.
+        """
+        s = "[Rectangle]"
+        size = f"{self.x}/{self.y}"
+        return f"{s} ({self.id}) {size} - {self.width}/{self.height}"
