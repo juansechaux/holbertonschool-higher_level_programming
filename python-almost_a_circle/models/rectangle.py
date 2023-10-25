@@ -106,5 +106,12 @@ class Rectangle(Base):
         """public method, that returns the dictionary
         representation of a Rectangle.
         """
-        new_dic = {"width": self.width, "height": self.height, "x": self.x, "y": self.y, "id": self.id}
+        new_dic = {
+                "width": self.width,
+                "height": self.height,
+                "x": self.x,
+                "y": self.y,
+                "id": self.id
+                }
+
         return new_dic
