@@ -26,5 +26,4 @@ class Base:
         new_dict = []
         if list_dictionaries is None or list_dictionaries is ():
             return new_dict
-        new_dict = json.dumps(list_dictionaries)
-        return new_dict
+        return json.dumps(list_dictionaries)
