@@ -21,7 +21,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """public method, that returns a list of
+        """public method, that returns a json list of
         a dictionary representation.
         """
         new_dict = "[]"
@@ -41,3 +41,13 @@ class Base:
                 list_of_dict.append(obj.to_dictionary())
         with open(class_name, mode="w+", encoding="utf-8") as file:
             file.write(cls.to_json_string(list_of_dict))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """public method, that returns a list of
+        a dictionary representation.
+        """
+        new_dict = []
+        if json_string is not None:
+            return json.loads(json_string)
+        return new_dict
