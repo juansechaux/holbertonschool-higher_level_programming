@@ -35,8 +35,9 @@ class Base:
         using a JSON representation.
         """
         list_of_dict = []
+        class_name = cls.__name__ + ".json"
         if list_of_dict is not None:
             for obj in list_objs:
                 list_of_dict.append(obj.to_dictionary())
-        with open((cls.__name__ + ".json"), mode="w+", encoding="utf8") as file:
+        with open(class_name, mode="w+", encoding="utf8") as file:
             file.write(cls.to_json_string(list_of_dict))
