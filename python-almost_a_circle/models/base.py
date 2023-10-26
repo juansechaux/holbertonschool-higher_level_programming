@@ -2,6 +2,8 @@
 """ Module that have the class Base
 """
 
+import json
+
 
 class Base:
     """Class Base, private class attribute __nb_objects = 0
@@ -16,3 +18,9 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        new_dict = []
+        if list_dictionaries is None or list_dictionaries is ():
+            return new_dict
+        return json.dumps(list_dictionaries)
