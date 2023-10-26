@@ -58,3 +58,13 @@ class Base:
         dummy = cls(1, 1) if cls.__name__ == "Rectangle" else cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        list_ret = []
+        class_name = cls.__name__ + ".json"
+        with open(class_name, mode="r") as file:
+            file_content = json.load(file)
+            for dic in file_content:
+                list_ret.append(cls.create(**dic))
+            return list_ret
