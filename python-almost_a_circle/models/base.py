@@ -36,7 +36,7 @@ class Base:
         """
         list_of_dict = []
         class_name = cls.__name__ + ".json"
-        if list_of_dict is not None:
+        if list_objs is not None:
             for obj in list_objs:
                 list_of_dict.append(obj.to_dictionary())
         with open(class_name, mode="w+", encoding="utf-8") as file:
