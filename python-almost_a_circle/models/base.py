@@ -61,10 +61,14 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        list_ret = []
-        class_name = cls.__name__ + ".json"
-        with open(class_name, mode="r") as file:
-            file_content = json.load(file)
-            for dic in file_content:
-                list_ret.append(cls.create(**dic))
-            return list_ret
+        """File to instances"""
+        try:
+            list_ret = []
+            class_name = cls.__name__ + ".json"
+            with open(class_name, mode="r") as file:
+                list_ret_print = cls.from_json_string(file.read())
+                for objt in list_ret_print:
+                    list_ret.append(cls.create(**objt))
+        except Exception:
+            pass
+        return list_ret
