@@ -6,6 +6,6 @@
 SELECT id, name
         FROM cities
         WHERE state_id =        
-          (SELECT state_id
-           FROM cities
-           WHERE state_id = 1);
+          (SELECT id
+           FROM states
+           WHERE name = 'California');
