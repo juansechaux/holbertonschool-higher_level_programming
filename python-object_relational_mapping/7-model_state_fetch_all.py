@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """A script to list states from database hbtn_0e_0_usa."""
 import sys
+import sqlalchemy
 from model_state import Base, State
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
