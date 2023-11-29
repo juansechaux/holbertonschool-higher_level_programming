@@ -17,8 +17,7 @@ if __name__ == "__main__":
 
     id_state, name_state = session.query(State.id, State.name).first()
 
-    if id_state:
+    if id_state and name_state:
         print('{}: {}'.format(id_state, name_state))
     else:
         print("")
-    session.close()
