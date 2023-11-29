@@ -15,9 +15,16 @@ if __name__ == "__main__":
 
     session = Session()
 
-    id_state, name_state = session.query(State.id, State.name).first()
+    first_state = session.query(State).first()
 
-    if id_state and name_state:
-        print('{}: {}'.format(id_state, name_state))
-    else:
+    if first_state is None:
         print("Nothing")
+    else:
+        print('{}: {}'.format(first_state.id, first_state.name))
+
+    # id_state, name_state = session.query(State.id, State.name).first()
+
+    # if id_state and name_state:
+    #     print('{}: {}'.format(id_state, name_state))
+    # else:
+    #     print("Nothing")
