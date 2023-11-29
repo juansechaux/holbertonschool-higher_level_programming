@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """A script to list states from database hbtn_0e_0_usa."""
-import sqlalchemy
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
 
