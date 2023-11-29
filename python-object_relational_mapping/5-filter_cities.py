@@ -26,8 +26,9 @@ if __name__ == "__main__":
         if count < num_rows:
             print("{}, ".format(cities[0]), end="")
         else:
-            print("{}".format(cities[0]))
+            print("{}".format(cities[0]), end="")
         count += 1
+    print("")
 
     cursor.close()
     db.close()
