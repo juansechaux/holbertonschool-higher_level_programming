@@ -15,5 +15,6 @@ if __name__ == "__main__":
 
     session = Session()
 
-    for id_state, name_state in session.query(State.id, State.name):
-        print('{}: {}'.format(id_state, name_state))
+    id_state, name_state = session.query(State.id, State.name).first()
+
+    print('{}: {}'.format(id_state, name_state))
