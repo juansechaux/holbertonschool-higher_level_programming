@@ -20,4 +20,4 @@ if __name__ == "__main__":
     if id_state and name_state:
         print('{}: {}'.format(id_state, name_state))
     else:
-        print("")
+        print("Nothing")
