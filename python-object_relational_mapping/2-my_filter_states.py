@@ -20,7 +20,7 @@ if __name__ == "__main__":
     cursor.execute("SELECT * FROM states")
     for states in cursor.fetchall():
         if states[1] == state_name:
-            print('({}, {})'.format(states[0], states[1]))
+            print('({}, \'{}\')'.format(states[0], states[1]))
 
     cursor.close()
     db.close()
