@@ -11,7 +11,8 @@ if __name__ == "__main__":
     password = argumentos[2]
     database = argumentos[3]
 
-    db = MySQLdb.connect(host="localhost", user=username, passwd=password, db=database)
+    db = MySQLdb.connect(host="localhost", user=username, passwd=password,
+                         db=database)
 
     cursor = db.cursor()
 
