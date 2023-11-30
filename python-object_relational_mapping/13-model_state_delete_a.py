@@ -17,5 +17,4 @@ if __name__ == "__main__":
 
     for fil_state in session.query(State).filter(State.name.like('%a%')):
         session.delete(fil_state)
-    # session.add(fil_state)
     session.commit()
